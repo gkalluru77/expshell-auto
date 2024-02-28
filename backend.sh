@@ -1,6 +1,8 @@
 log_file=/tmp/out
 color="\e[32m"
 
+MYSQL_ROOT_PASSWORD = $1
+
 echo -e "${color} disable node js default version \e[0m"
 dnf module disable nodejs -y &>> log_file
 
@@ -112,7 +114,7 @@ else
 
 
 echo -e "${color} load schema  \e[0m"
-mysql -h mysql-dev.gdevops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>> log_file
+mysql -h mysql-dev.gdevops.online -uroot -p${MYSQL_ROOT_PASSWORD} < /app/schema/backend.sql &>> log_file
 
 echo $?
 
