@@ -1,5 +1,5 @@
 log_file=/tmp/out
-color="\e[31m"
+color="\e[32m"
 
 echo -e "${color} Installing Nginx \e[0m"
 dnf install nginx -y &>> log_file
