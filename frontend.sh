@@ -8,7 +8,7 @@ echo -e "\e[31m Removing default content Nginx \e[0m"
 rm -rf /usr/share/nginx/html/* &>> /tmp/out
 
 echo -e "\e[31m extracting fronend zip \e[0m" &>> /tmp/out
-curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip
+curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip &>> /tmp/out
 
 echo -e "\e[31m unzip frontend file \e[0m"
 cd /usr/share/nginx/html
