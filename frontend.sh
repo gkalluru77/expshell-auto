@@ -7,7 +7,7 @@ cp expense.conf /etc/nginx/default.d/expense.conf
 echo -e "\e[31m Removing default content Nginx \e[0m"
 rm -rf /usr/share/nginx/html/*
 
-echo -e "\e[31m extracting fronend zip \e[0m"
+echo -e "\e[31m extracting fronend zip \e[0m" &>> /tmp/out
 curl -o /tmp/frontend.zip https://expense-artifacts.s3.amazonaws.com/frontend.zip
 
 echo -e "\e[31m unzip frontend file \e[0m"
