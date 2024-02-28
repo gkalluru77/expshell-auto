@@ -114,6 +114,8 @@ else
 echo -e "${color} load schema  \e[0m"
 mysql -h mysql-dev.gdevops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>> log_file
 
+echo $?
+
  if [ $? -eq 0 ]; then
    echo -e "\e[32m Success \e[0m"
  else
