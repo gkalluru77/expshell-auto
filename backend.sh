@@ -1,5 +1,4 @@
-log_file=/tmp/out
-color="\e[32m"
+source common.sh
 
 if [ -z "$1" ];then
   echo Pasword input missing in the first argument
@@ -7,14 +6,6 @@ if [ -z "$1" ];then
   fi
 
 MYSQL_ROOT_PASSWORD=$1
-
-status_check(){
-  if [ $? -eq 0 ]; then
-    echo -e "\e[32m Success \e[0m"
-  else
-    echo -e "\e[31m Failure \e[0m"
-   fi
-}
 
 
 echo -e "${color} disable node js default version \e[0m"
